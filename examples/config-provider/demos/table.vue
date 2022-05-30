@@ -11,9 +11,9 @@
 </template>
 
 <script lang="jsx">
-import { ChevronRightIcon, CaretDownSmallIcon } from 'tdesign-icons-vue';
+import { ChevronRightIcon, CaretDownSmallIcon /** , ChevronDownIcon */ } from 'tdesign-icons-vue';
 import merge from 'lodash/merge';
-import enConfig from 'tdesign-vue/locale/en_US';
+import enConfig from 'tdesign-vue/es/locale/en_US';
 
 const columns = [
   {
@@ -65,6 +65,7 @@ export default {
           // sortAscendingOperationText: 'ascending sort',
           // sortCancelOperationText: 'cancel sort',
           // sortDescendingOperationText: 'descending sort',
+          // treeExpandAndFoldIcon: (h, { type }) => type === 'expand' ? <ChevronRightIcon /> : <ChevronDownIcon />,
         },
       }),
       columns,

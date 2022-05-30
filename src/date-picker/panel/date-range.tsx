@@ -86,10 +86,8 @@ export default Vue.extend<DateRangeData, DateRangeMethods, DateRangeComputed, Da
   },
   watch: {
     value: {
-      handler(value) {
-        const [startValue = TODAY, endValue = TODAY] = value;
-        this.startValue = startValue;
-        this.endValue = endValue;
+      handler() {
+        this.initialPicker();
       },
       immediate: true,
     },
@@ -97,12 +95,6 @@ export default Vue.extend<DateRangeData, DateRangeMethods, DateRangeComputed, Da
       this.leftType = value;
       this.rightType = value;
     },
-  },
-  created() {
-    this.initialPicker();
-  },
-  beforeDestroy() {
-    this.initialPicker();
   },
   methods: {
     initialPicker() {
@@ -290,10 +282,11 @@ export default Vue.extend<DateRangeData, DateRangeMethods, DateRangeComputed, Da
       this.$data[`${direction}Type`] = type;
     },
   },
+
   render() {
     const { leftType, rightType, firstDayOfWeek } = this;
     return (
-      <div class={`${prefix}-date-picker__panels`}>
+      <div class={`${prefix}-date-picker__panels`} onClick={(e: MouseEvent) => e.stopPropagation()}>
         <div class={`${prefix}-date-picker__panel`}>
           <t-date-header
             year={this.leftYear}

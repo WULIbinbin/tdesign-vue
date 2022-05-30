@@ -31,7 +31,6 @@ exports[`ConfigProvider ConfigProvider calendarVue demo works fine 1`] = `
             </span>
             <span
               class="t-select__single"
-              title="2020"
             >
               2020
             </span>
@@ -70,7 +69,6 @@ exports[`ConfigProvider ConfigProvider calendarVue demo works fine 1`] = `
             </span>
             <span
               class="t-select__single"
-              title="12"
             >
               12
             </span>
@@ -1431,6 +1429,36 @@ exports[`ConfigProvider ConfigProvider dialogVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`ConfigProvider ConfigProvider globalVue demo works fine 1`] = `
+<div>
+  <div>
+    使用
+    <code>
+      t-config-provider
+    </code>
+    包裹业务功能的最外层组件，点击下方图标查看示例代码
+  </div>
+   
+  <br />
+   
+  <div>
+    英文语言包引入路径：
+    <code>
+      import enConfig from 'tdesign-vue/es/locale/en_US';
+    </code>
+  </div>
+   
+  <br />
+   
+  <div>
+    中文语言包引入路径：
+    <code>
+      import enConfig from 'tdesign-vue/es/locale/zh_CN';
+    </code>
+  </div>
+</div>
+`;
+
 exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
 <div
   class="tdesign-demo-item--locale-provider-base"
@@ -2786,7 +2814,6 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
       class="t-tree__list"
       enteractiveclass="t-tree__item--enter-active"
       leaveactiveclass="t-tree__item--leave-active"
-      name="t-tree-toggle"
       tag="div"
     >
       <div
@@ -2816,7 +2843,7 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
           </svg>
         </span>
         <span
-          class="t-tree__label t-tree__label--strictly"
+          class="t-tree__label"
         >
           <span
             style="position: relative;"
@@ -2852,7 +2879,7 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
           </svg>
         </span>
         <span
-          class="t-tree__label t-tree__label--strictly"
+          class="t-tree__label"
         >
           <span
             style="position: relative;"
@@ -2870,7 +2897,7 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
   <br />
    
   <div
-    class="t-steps t-steps--vertical t-steps--default-anchor t-steps--positive"
+    class="t-steps t-steps--vertical t-steps--positive t-steps--default-anchor t-steps--line-separator"
   >
     <div
       class="t-steps-item t-steps-item--finish"
@@ -3022,7 +3049,7 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
           <span
             class="t-steps-item__icon--number"
           >
-            0
+            4
           </span>
         </div>
         <div
@@ -3075,7 +3102,6 @@ exports[`ConfigProvider ConfigProvider paginationVue demo works fine 1`] = `
       </span>
       <span
         class="t-select__single"
-        title="10"
       >
         10
       </span>
@@ -3316,6 +3342,10 @@ exports[`ConfigProvider ConfigProvider tableVue demo works fine 1`] = `
     <div
       class="t-table__content"
     >
+      <div
+        class="t-table__resize-line"
+        style="display: none; left: 10px; height: 10px;"
+      />
       <table
         class="t-table--layout-fixed"
       >
@@ -3548,6 +3578,10 @@ exports[`ConfigProvider ConfigProvider tableVue demo works fine 1`] = `
     <div
       class="t-table__content"
     >
+      <div
+        class="t-table__resize-line"
+        style="display: none; left: 10px; height: 10px;"
+      />
       <table
         class="t-table--layout-fixed"
       >
